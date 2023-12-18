@@ -1,0 +1,154 @@
+
+@mixin tablet_width()
+  max-width: 768px
+  width: 100%
+  margin: 0 auto
+
+@mixin img_position()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  margin: auto
+
+@mixin img_positionHeight()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  margin: auto
+
+@mixin baseWidth
+  max-width: 1080px
+  margin: 0 auto
+
+@mixin largeBtn
+  padding: 32px 40px 34px
+  background: $base_blue
+  border-radius: 50px
+  font-size: $title_font - 0.3
+  color: $base-white
+  font-weight: $base_weight
+  box-shadow: 0 5px 10px rgba(2,13,45, 0.15)
+  @media screen and (max-width: 767px)
+    padding: 18px 28px
+    font-size: $base_font + 0.2
+
+@mixin largeBtnSettings( $font_color: $d_color, $bg_color: $base-white )
+  display: inline-block
+  padding: 32px 40px 34px
+  background: $bg_color
+  border-radius: 50px
+  font-size: $title_font - 0.3
+  color: $font_color
+  font-weight: $base_weight
+  box-shadow: 0 5px 10px rgba(2,13,45, 0.15)
+  @media screen and (max-width: 767px)
+    padding: 18px 28px
+    font-size: $base_font + 0.2
+
+@mixin btnHoverAction
+  &:not(.not_hover)
+    transition: 0.3s box-shadow, 0.3s transform
+    &:hover
+       transform: translate(0,4px)
+       box-shadow: none
+
+@mixin btnHoverActionWhite
+  &:not(.not_hover)
+    transition: 0.3s background-color
+    &:hover
+       background-color: $bule_more_thin_color
+
+@mixin img_position()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  margin: auto
+
+@mixin img_positionHeight()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  margin: auto
+
+@mixin baseWidth
+  max-width: 1080px
+  margin: 0 auto
+
+@mixin largeBtn
+  padding: 32px 40px 34px
+  background: $base_blue
+  border-radius: 50px
+  font-size: $title_font - 0.3
+  color: $base-white
+  font-weight: $base_weight
+  box-shadow: 0 5px 10px rgba(2,13,45, 0.15)
+  @media screen and (max-width: 767px)
+    padding: 18px 28px
+    font-size: $base_font + 0.2
+
+@mixin largeBtnSettings( $font_color: $d_color, $bg_color: $base-white, $hover_color: none )
+  display: inline-block
+  padding: 32px 40px 34px
+  background: $bg_color
+  border-radius: 50px
+  font-size: $title_font - 0.3
+  color: $font_color
+  font-weight: $base_weight
+  box-shadow: 0 5px 10px rgba(2,13,45, 0.15)
+  @if $hover_color != none
+    transition: 0.3s box-shadow, 0.3s transform, 0.6s background-color
+    &:hover
+       transform: translate(0,4px)
+       box-shadow: none
+       background-color: $hover_color
+       color: $base_white
+    @media screen and (max-width: 767px)
+      padding: 18px 28px
+      font-size: $base_font + 0.2
+  @else
+    transition: 0.3s box-shadow, 0.3s transform
+    &:hover
+       transform: translate(0,4px)
+       box-shadow: none
+    @media screen and (max-width: 767px)
+      padding: 18px 28px
+      font-size: $base_font + 0.2
+
+@mixin circleArrow
+  width: 34px
+  height: 34px
+  background-color: $bule_thin_sub_color
+  border-radius: 50%
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 13px
+    bottom: 0
+    width: 14px
+    height: 14px
+    margin: auto
+    border-left: 3px solid
+    border-bottom: 3px solid
+    color: $base_font_color
+    transform: rotate(-135deg)
+
+@mixin placeholderColor( $font_color: #333 )
+  &::placeholder
+   color: $font_color
+  &input:-ms-input-placeholder
+   color: $font_color
+  &::-ms-input-placeholder
+   color: $font_color

@@ -1,0 +1,38 @@
+@import "./parts/variable"
+
+.preview-box
+  position: relative
+  margin-right: 20px
+  padding: 80px 0
+  background-color: $base-white
+  &__title
+    padding: 10px 0
+    color: #ccc
+    display: inline-block
+    border-bottom: 2px solid #ccc
+  a
+    color: $base_font_color
+    text-decoration: none
+
+  img
+    max-width: 100%
+    height: auto
+    vertical-align: middle
+
+._flex_
+  display: flex
+  flex-wrap: wrap
+  &c_
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  &s_b_
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+
+@import "./parts/admin_manage"
+@import "./parts/admin_preview"

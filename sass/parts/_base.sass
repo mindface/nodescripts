@@ -1,0 +1,206 @@
+@import url("https://use.typekit.net/hmt2sip.css")
+
+html
+  width: 100%
+  height: 100%
+  min-height: 100%
+  font-size: 62.5%
+  color: #333
+body
+  width: 100%
+  height: 100%
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif
+  line-height: 1
+  color: $base_font_color
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+a
+  color: $base_font_color
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+
+ul,
+ol,
+li
+  list-style: none
+
+._flex_
+  display: flex
+  flex-wrap: wrap
+  &c_
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  &s_b_
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+.main
+  scroll-behavior: smooth
+  min-height: calc(100vh - 177px)
+
+section:not(._limit_off_)
+  .content
+    .content__text
+      max-width: 50%
+      @media screen and (max-width: 767px)
+        max-width: 100%
+      .text
+        padding: 0 0 30px
+    .content__img
+      max-width: 50%
+      @media screen and (max-width: 767px)
+        max-width: 100%
+
+.large-btn
+  @include largeBtn
+  @include btnHoverAction
+
+.large-btn-w
+  @include largeBtnSettings($base_font_color,$base_white)
+
+.large-btn-gray
+  pointer-events: none
+  @include largeBtnSettings(#82889d,#dfe1e6)
+
+.section-title
+  font-size: $title_font + 0.1
+  text-align: center
+  font-weight: $base_weight
+  @media screen and (max-width: 767px)
+    font-size: $base_font
+.section-title
+  &--large
+    max-width: $inner_width
+    margin: 0 auto
+    padding: 0 24px
+    font-size: 9rem
+    font-weight: $base_weight
+    @media screen and (max-width: 767px)
+      font-size: 4.6rem
+      padding: 0 8px
+    .title-sub
+      padding: 10px 0 0
+      display: block
+      font-size: $title_font + 0.9
+      @media screen and (max-width: 767px)
+        font-size: $title_font - 0.4
+
+section
+  overflow: hidden
+  .swiper-scrollbar-drag
+    // max-width: 880px
+    max-height: 30px
+    background-color: $base_blue
+
+  .swiper-container
+    max-height: 512px
+    height: 100%
+    background: #fff
+    overflow: visible
+    @media screen and (min-width: 1281px)
+      max-height: 484px
+      width: 1034px
+    @media screen and (max-width: 767px)
+      max-height: 424px
+      width: auto
+    .swiper-slide
+      text-align: center
+      font-size: 18px
+      width: 328px
+
+  .slider-contents
+    position: relative
+
+  .swiper-scrollbar
+    height: 30px
+    left: 0
+    @media screen and (max-width: 767px)
+      max-width: 100%
+  .swiper-scrollbar
+    background: rgba(241, 244, 255, 1)
+    border-radius: 50px
+    @media screen and (max-width: 767px)
+      height: 30px
+  .swiper-scrollbar-drag
+    background: rgba(44, 93, 255, 1)
+    border-radius: 50px
+
+// anmation
+
+._set_font_animation_
+  .in
+    opacity: 0
+  &._fade_animation_
+    .in
+      display: inline-block
+      transform: translate(0, 70px)
+      &:nth-child(1)
+        @include fadeAnimationFont(0)
+      &:nth-child(2)
+        @include fadeAnimationFont(0.2)
+      &:nth-child(3)
+        @include fadeAnimationFont(0.4)
+      &:nth-child(4)
+        @include fadeAnimationFont(0.6)
+
+._set_animation_
+  opacity: 0
+  &._fade_animation_
+    animation: fadeAnimationBottom 1s ease 0s forwards
+    &:nth-child(2)
+      animation: fadeAnimationBottom 1s ease 0.3s forwards
+
+
+
+// Responsive
+
+._wide_pc_only_
+  display: none
+._wide_pc_hide_
+  display: block
+._pc_hide_
+  display: none
+._gnav_hide_
+  display: block
+._gnav_fade_
+  display: none
+._sp_only_
+  display: none
+._sp_smaller_
+  display: none
+
+@media screen and (min-width: 1281px)
+  ._wide_pc_only_
+    display: block
+  ._wide_pc_hide_
+    display: none
+
+@media screen and (max-width: 1024px)
+  ._gnav_hide_
+    display: none
+  ._gnav_fade_
+    display: block
+@media screen and (max-width: 768px)
+  ._sp_hide_
+    display: none
+  ._pc_hide_
+    display: block
+@media screen and (max-width: 480px)
+  ._sp_smaller_
+    display: block
+
+@media screen and (max-width: 374px)
+  ._sp_smaller_
+    display: block

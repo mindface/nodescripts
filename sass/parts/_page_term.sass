@@ -1,0 +1,66 @@
+
+.page-term
+  max-width: 798px
+  margin: 0 auto
+  padding: 40px 20px 0
+  &__title
+    font-size: $title_sub_font - 0.2
+    padding: 0 0 40px
+    line-height: 1.7
+  // &__text
+
+.policy-content,
+.term-content
+   &__title
+    font-size: $title_sub_font - 0.2
+    padding: 0 0 40px
+    line-height: 1.7
+   &__text
+     font-size: 18px
+     line-height: 1.7
+     padding: 0 0 48px
+     .list
+       counter-reset: num
+       .item
+         counter-increment: num
+         &:before
+           content: counter(num)"."
+     .list_f_
+       counter-reset: numf
+       .item
+         padding: 0 0 0 34px
+         &:before
+           counter-increment: numf
+           content: counter(numf)")"
+     .list_b_
+       padding: 10px 0 20px
+       counter-reset: numb
+       .item
+         padding: 0 0 0 30px
+         &:before
+           counter-increment: numb
+           content: counter(numb)"."
+     .item
+       position: relative
+       &:before
+         position: absolute
+         top: -3px
+         left: 0
+         bottom: 0
+         font-size: 20px
+     .address
+       &-text
+         padding: 0
+.enactment
+  padding: 0 0 48px
+  line-height: 1.7
+  font-size: 18px
+  text-align: right
+  &-sub
+    display: block
+.policy-content
+  &__text
+    p
+      padding: 0 0 40px
+    .address
+      text-align: right

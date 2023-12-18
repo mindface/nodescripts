@@ -1,0 +1,108 @@
+
+@mixin fadeAnimationMixinTop($timerTop: 0)
+  opacity: 0
+  transform: translate(0, 30px)
+  animation: fadeAnimationTop 0.5s ease #{$timerTop}s forwards
+
+@mixin fadeAnimationMixinBottom($timerBottom: 0)
+  opacity: 0
+  transform: translate(0, 30px)
+  animation: fadeAnimationBottom 0.5s ease #{$timerBottom}s forwards
+
+@mixin fadeAnimationMixinLeft($timerLeft: 0)
+  opacity: 0
+  transform: translate(30px, 0)
+  animation: fadeAnimationnLeft 0.5s ease #{$timerLeft}s forwards
+
+@mixin fadeAnimationMixinRight($timerRight: 0)
+  opacity: 0
+  transform: translate(30px, 0)
+  animation: fadeAnimationnRight 0.5s ease #{$timerRight}s forwards
+
+
+@mixin fadeAnimationFont($timer: 0)
+  opacity: 0
+  transform: translate(0, 40px)
+  animation: fadeAnimationBottom 0.7s ease #{$timer}s forwards
+
+@mixin fadeAnimationMixinOpactiy($timer: 0)
+  opacity: 0
+  animation: fadeAnimationOpactiy 0.2s ease #{$timer}s forwards
+
+@mixin fadeAnimationMixinTransformTop($timer: 0)
+  transform: translate(0,-100%)
+  animation: fadeAnimationTransformTop 0.3s ease #{$timer}s forwards
+
+///*
+//@keyframes
+//*/
+
+@keyframes fadeAnimationBottom
+  0%
+    opacity: 0
+    transform: translate(0, 30px)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeAnimationTop
+  0%
+    opacity: 0
+    transform: translate(0, -30px)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeAnimationnLeft
+  0%
+    opacity: 0
+    transform: translate(-30px, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeAnimationnRight
+  0%
+    opacity: 0
+    transform: translate(30px, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@mixin fadeAnimationMixinFontColor($name: "base",$color: #333)
+  @keyframes fadeAnimationFontText#{$name}
+    0%
+      color: transparent
+    50%
+      color: transparent
+    50.01%
+      color: #{$color}
+    100%
+      color: #{$color}
+
+@include fadeAnimationMixinFontColor("Title",$base_font_color)
+
+@keyframes coverSwiper
+  0%
+    transform: scaleX(0)
+  50%
+    transform: scaleX(1)
+    transform-origin: left 50%
+  50.001%
+    transform: scaleX(1)
+    transform-origin: right 50%
+  100%
+    transform: scaleX(0)
+    transform-origin: right 50.2%
+
+@keyframes fadeAnimationOpactiy
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fadeAnimationTransformTop
+  0%
+    transform: translate(0,-100%)
+  100%
+    transform: translate(0,0)

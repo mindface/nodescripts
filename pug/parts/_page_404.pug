@@ -1,0 +1,21 @@
+
+section.recommend
+  .block__title-box
+    h3.block__title
+      | RECOMMENDED
+      span.title-sub
+        | おすすめ記事
+  .block__content-box
+    .block__content
+      .block-posts
+        ul.block-posts__list._flex_
+          each val in ["1","2","3","4","5","6","7"]
+            li.block-posts__item
+              a(href="#").item-link
+                .img-block
+                  img(src="/assets/images/single/img-03.png").img
+                .text-block
+                  p.text
+                    | テキストテキストテキストテキストテキスト
+                  time.time
+                    span.time-sub 2019.10.08

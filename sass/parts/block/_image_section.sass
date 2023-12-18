@@ -1,0 +1,29 @@
+
+.image-section
+  padding: 72px 0 75px
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: 100%
+  color: $base_white
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  @media screen and (max-width: 767px)
+    padding: 40px 16px 44px
+    background-attachment: inherit
+  [class*="-section-title"]
+    line-height: 1.4
+    padding: 0 0 26px
+    @media screen and (max-width: 767px)
+      font-size: $title_sub_font - 0.2
+  .content
+    text-align: center
+    &__text
+      max-width: inherit
+      padding: 0 20px
+      font-size: $base_font + 0.4
+      line-height: 1.7
+      @media screen and (max-width: 767px)
+        font-size: $sub_font
+      @media screen and (max-width: 480px)
+        padding: 0

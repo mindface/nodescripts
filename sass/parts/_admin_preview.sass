@@ -1,0 +1,44 @@
+
+.preview-box
+  .base
+    &__banner
+      padding: 20px 10px
+      .banner-box
+        max-width: 316px
+        padding: 0 8px
+        @media screen and (max-width: 480px)
+          &:first-child
+            padding: 0 8px 48px
+
+  &.banner-stick-outer
+    padding: 160px 0 0
+    background-image: url(/assets/images/admin/banner-stick-bg.png)
+    background-size: contain
+    background-repeat: no-repeat
+  .banner-stick
+    width: 230px
+    margin: 0 0 0 auto
+    .banner-box
+      margin: 0 0 16px
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16)
+
+  .banner-stick-sp
+    margin: -320px 0 0
+    max-width: 270px
+    min-height: 400px
+    padding: 30px 0 0
+    background-image: url(/assets/images/admin/banner-stick-sp-frame.png)
+    background-size: 100%
+    background-repeat: no-repeat
+    .block
+      &__content
+         max-width: 480px
+         margin: 0 20px
+         padding: 340px 0 0
+         background-image: url(/assets/images/admin/banner-stick-sp-bg.jpg)
+         background-size: 100%
+         background-repeat: no-repeat
+         background-color: $base_white
+         .content
+           &__banner
+              display: flex

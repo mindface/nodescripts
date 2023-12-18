@@ -1,0 +1,589 @@
+
+[id^="_smooth_"]
+  margin-top: -60px
+  padding-top: 60px
+
+.page-single
+  .main
+    @include tablet_width()
+    @media screen and (max-width: 768px)
+      padding: 0 16px
+
+.article-post
+  &__title
+    padding: 16px 0 32px
+    font-size: $title_sub_font - 0.2
+    line-height: 1.7
+    @media screen and (max-width: 768px)
+      padding: 0 0 26px
+    @media screen and (max-width: 480px)
+      padding: 0 0 32px
+      font-size: $base_font + 0.2
+  &__explanation
+    position: relative
+    z-index: 2
+    &-text
+      .text
+        padding: 0 0 26px
+        font-size: $base_font + 0.2
+        line-height: 1.7
+        @media screen and (max-width: 480px)
+          padding: 0 0 32px
+  &--visual-area
+    position: relative
+    z-index: 1
+    &::before
+      content: ""
+      position: absolute
+      z-index: 1
+      left: 50%
+      bottom: 0
+      display: block
+      height: calc(100% - 160px)
+      width: 100vw
+      background-color: $bule_more_thin_color
+      transform: translate(-50%,0)
+  &__visual
+    position: relative
+    z-index: 2
+    padding: 0 0 50px
+    @media screen and (max-width: 480px)
+      padding: 0 0 41px
+    .visual-img
+      box-shadow: 0 4px 16px 0 rgba(2,13,49,0.1)
+  &__details
+    position: relative
+    z-index: 2
+  .contents-levels
+    padding: 0 0 80px
+    @media screen and (max-width: 480px)
+      padding: 0 0 40px
+    &__title
+      max-width: 445px
+      width: 100%
+      font-size: 7rem
+      font-weight: $base_weight
+      @media screen and (max-width: 768px)
+        padding: 0 0 28px
+      @media screen and (max-width: 480px)
+        font-size: 4.2rem
+    .title-sub
+      display: block
+      font-size: 4.4rem
+      @media screen and (max-width: 480px)
+        font-size: 2.4rem
+    .flow-item
+    .flow-link
+      display: inline-block
+      font-size: $base_font + 0.2
+      line-height: 1.7
+      &:hover
+        color: #2c5dff
+      .aid
+        display: inline-block
+        padding: 0 10px 0 0
+  &__editer-content
+    position: relative
+    z-index: 2
+    padding: 80px 0 0
+    @media screen and (max-width: 480px)
+      padding: 40px 0 0
+    h2
+      padding-bottom: 39px
+      font-size: $title_sub_font - 0.2
+      font-weight: $base_weight
+      @media screen and (max-width: 480px)
+        font-size: $base_font + 0.2
+        padding-bottom: 32px
+    h3
+      position: relative
+      margin-bottom: 24px
+      padding-left: 53px
+      font-size: $base_font + 0.4
+      font-weight: $base_weight
+      @media screen and (max-width: 480px)
+        font-size: $base_font + 0.1
+      &::before
+        content: ""
+        position: absolute
+        top: 72px
+        left: 0
+        height: 1px
+        width: 50px
+        background-color: $base_font_color
+    p
+      padding: 0 0 50px
+      font-size: $base_font + 0.2
+      line-height: 1.7
+      @media screen and (max-width: 480px)
+        font-size: $base_font
+    .wp-block-image
+      img
+        border-radius: 10px
+        box-shadow: 0 4px 16px 0 rgba(2,13,49,0.1)
+      figcaption
+        margin: 24px 0 48px
+        font-size: $sub_font
+    blockquote
+      position: relative
+      margin: 0 0 48px
+      padding: 24px 24px 26px 66px
+      background-color: $bule_more_thin_color
+      &::after
+        font-family: 'Material Icons'
+        content: "\e244"
+        position: absolute
+        top: 10px
+        left: 10px
+        transform: rotate(180deg)
+        font-size: $title_font + 1
+      p
+        padding: 0 0 22px
+        font-size: $sub_font
+      cite
+        display: block
+        width: 100%
+        text-align: right
+        font-size: $sub_font - 0.2
+    ul
+      padding: 0 0 34px
+      li
+        position: relative
+        margin: 0 0 16px
+        padding: 0 0 0 34px
+        font-size: $sub_font + 0.2
+        &::before
+          content: ""
+          position: absolute
+          top: 6px
+          left: 4px
+          width: 4px
+          height: 4px
+          background-color: $base_font_color
+          border-radius: 50%
+
+  &__other-post
+    position: relative
+    margin: 0 0 28px
+    padding: 16px
+    border-radius: 10px
+    box-shadow: 0 4px 16px 0 rgba(2,13,49, 0.1)
+    .content
+      &__img
+        max-width: 190px
+        @media screen and (max-width: 480px)
+          max-width: 88px
+      &__text
+        max-width: calc(100% - 190px)
+        padding: 0 0 0 16px
+        @media screen and (max-width: 480px)
+          max-width: calc(100% - 88px)
+          padding: 0 0 0 8px
+        .title
+          padding: 0 0 18px
+          font-size: $base_font + 0.2
+          line-height: 1.7
+          @media screen and (max-width: 480px)
+            display: -webkit-box
+            height: 64px
+            -webkit-box-orient: vertical
+            -webkit-line-clamp: 3
+            text-overflow: ellipsis
+            overflow: hidden
+            font-size: $base_font - 0.2
+            line-height: 1.4
+        .text
+          padding: 0 0 25px
+          font-size: $base_font - 0.2
+          line-height: 1.7
+          &-inner
+            display: -webkit-box
+            height: 66px
+            -webkit-box-orient: vertical
+            -webkit-line-clamp: 3
+            text-overflow: ellipsis
+            overflow: hidden
+            @media screen and (max-width: 480px)
+              display: none
+        .info-link
+          position: relative
+          display: inline-block
+          padding: 0 0 0 30px
+          font-size: $base_font - 0.2
+          color: $bule_thin_color
+          @media screen and (max-width: 480px)
+            position: absolute
+            left: 6px
+            bottom: 16px
+            padding: 0 0 0 26px
+            font-size: $small_font
+          &:after
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            display: inline-block
+            font-family: 'Material Icons'
+            content: "\e157"
+            font-size: 2rem
+            @media screen and (max-width: 480px)
+              display: flex
+              align-items: center
+              font-size: $sub_font
+      &__icon
+        position: absolute
+        right: 16px
+        bottom: 16px
+        @include circleArrow
+        @media screen and (max-width: 480px)
+          width: 20px
+          height: 20px
+          &:after
+            right: 7px
+            width: 7px
+            height: 7px
+            border-width: 2px
+
+  &__contributor
+    padding: 46px 0 80px
+    &-body
+      position: relative
+      padding: 30px 24px
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        width: 100%
+        height: 6px
+        background-image: url('/assets/images/single/line.png')
+        background-size: contain
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+    .block
+      &__title
+        padding: 0 0 27px
+        text-align: center
+        font-size: $base_font + 0.2
+    .content
+      &__img
+        padding: 0 0 0 60px
+        @media screen and (max-width: 480px)
+          padding: 0 0 24px
+          text-align: center
+          margin: 0 auto
+        .img-box
+          width: 90px
+          height: 90px
+          border-radius: 50%
+          overflow: hidden
+        .name-box
+          padding: 20px 0 0
+          text-align: center
+          font-size: $base_font
+      &__text
+        max-width: calc(100% - 150px)
+        padding: 0 0 0 31px
+        @media screen and (max-width: 480px)
+          max-width: 100%
+          padding: 0
+        .text
+          padding: 0 0 16px
+          font-size: $base_font
+          line-height: 1.7
+        .info-link
+          @media screen and (max-width: 480px)
+            text-align: right
+          .link
+            position: relative
+            display: inline-block
+            padding: 0 0 0 26px
+            font-size: $sub_font
+            color: $bule_thin_color
+            &:after
+              position: absolute
+              top: 0
+              left: 0
+              bottom: 0
+              display: flex
+              align-items: center
+              font-family: 'Material Icons'
+              content: "\e157"
+              font-size: 2rem
+
+.more-know
+  position: relative
+  padding: 80px 0
+  background-color: $bule_more_thin_color
+  @media screen and (max-width: 768px)
+    padding: 80px 16px
+  .block
+    &__title
+      padding: 0 0 32px
+      font-size: $title_sub_font - 0.2
+      text-align: center
+      @media screen and (max-width: 480px)
+        font-size: $base_font + 0.2
+    &__content
+      @include tablet_width()
+      @media screen and (max-width: 768px)
+        max-width: 100%
+      .box-
+        &service
+          max-width: 372px
+          width: 100%
+          margin: 0 0 24px
+          @media screen and (max-width: 768px)
+            max-width: calc(50% - 8px)
+          @media screen and (max-width: 480px)
+            max-width: 100%
+        &download
+          max-width: 372px
+          width: 100%
+          margin: 0 0 24px
+          @media screen and (max-width: 768px)
+            max-width: calc(50% - 8px)
+          @media screen and (max-width: 480px)
+            max-width: 100%
+        &contact
+          max-width: 768px
+          width: 100%
+      .service,
+      .download,
+      .contact
+        position: relative
+        display: block
+        width: 100%
+        padding: 16px
+        font-weight: $base_weight
+        background-color: $base_white
+        border: 1px solid $bule_thin_sub_color
+        .word
+          font-size: $title_sub_font
+          &-sub
+            display: block
+            padding: 8px 0 0
+            font-size: $base_font - 0.1
+            color: $bule_thin_color
+        &-icon
+          position: absolute
+          top: 0
+          right: 24px
+          bottom: 0
+          margin: auto
+          @include circleArrow
+      .contact
+        background-color: $base_font_color
+        color: $base_white
+        .word
+          &-sub
+            color: $base_white
+
+.recommend
+  max-width: 1052px
+  margin: 0 auto
+  padding: 80px 10px 40px
+  .block
+    &__title
+      padding: 0 0 50px
+      font-size: $title_font + 1.5
+      font-weight: $base_weight
+      .title-sub
+        padding: 8px 0 0
+        display: block
+        font-size: $title_sub_font - .2
+    &__content
+      .block-posts
+        &__item
+          position: relative
+          &:nth-child(-n+3)
+            max-width: 344px
+            margin: 0 0 16px
+            width: 33.333%
+            @media screen and (max-width: 480px)
+              max-width: 100%
+              width: 100%
+            .text-block
+              position: absolute
+              left: 0
+              bottom: 0
+              color: $base-white
+              .text
+                padding: 0 0 4px
+                @media screen and (max-width: 768px)
+                  font-size: $base_font
+                  line-height: 1.4
+              .time
+                text-align: right
+          &:nth-child(n+4)
+            width: calc(50% - 8px)
+            @media screen and (max-width: 768px)
+              width: 100%
+              margin-bottom: 16px
+            .item-link
+              display: flex
+            .img-block
+              max-width: 200px
+              width: 100%
+            .text-block
+              position: relative
+              .text
+                line-height: 1.4
+              .time
+                color: $bule_thin_color
+                @media screen and (max-width: 768px)
+                  position: absolute
+                  left: 16px
+                  bottom: 18px
+          .text-block
+            padding: 16px
+            .text
+              padding: 0 0 18px
+              font-size: $base_font + 0.2
+              line-height: 1.7
+              font-weight: $base_weight
+            .time
+              display: block
+              font-size: $sub_font
+              @media screen and (max-width: 768px)
+                font-size: 16/768*100vw
+              &-sub
+                position: relative
+                display: inline-block
+                padding: 0 0 0 20px
+                &:before
+                  font-family: 'Material Icons'
+                  content: "\e425"
+                  position: absolute
+                  top: 0
+                  left: 0
+                  bottom: 0
+                  margin: auto
+
+.category-block
+  max-width: 1052px
+  margin: 0 auto
+  padding: 80px 10px 40px
+  .block
+    &__title
+      padding: 0 0 50px
+      font-size: $title_font + 1.5
+      font-weight: $base_weight
+      .title-sub
+        padding: 8px 0 0
+        display: block
+        font-size: $title_sub_font - .2
+  .category
+    &__list
+    &__item
+      width: 33.333%
+      .link
+        position: relative
+        display: block
+        padding: 24px
+        font-size: $base_font + 0.2
+        transition: background 0.3s
+        &:hover
+          color: $base_blue
+          background-color: $bule_weak_color
+          &::before
+            border-color: $base_blue
+        &::before
+          content: ""
+          position: absolute
+          top: 0
+          right: 13px
+          bottom: 0
+          width: 14px
+          height: 14px
+          margin: auto
+          border-left: 2px solid
+          border-bottom: 2px solid
+          color: $base_font_color
+          transform: rotate(-135deg)
+
+.base
+  &__banner
+    padding: 20px 10px
+    .banner-box
+      max-width: 316px
+      padding: 0 8px
+      @media screen and (max-width: 480px)
+        &:first-child
+          padding: 0 8px 48px
+
+.consultation
+  padding: 80px 0 76px
+  background-color: $bule_more_thin_color
+  .block
+    &__title
+      padding: 0 0 32px
+      font-size: $title_sub_font - 0.2
+      text-align: center
+    &__content
+      max-width: 800px
+      margin: 0 auto
+      .link
+        position: relative
+        height: 233px
+        max-width: calc(50% - 24px)
+        width: 100%
+        margin: 0 12px
+        padding: 16px
+        background-color: $base-white
+        border: 1px solid #dfe1e6
+        border-radius: 3px
+        background-position: 0 0
+        background-size: contain
+        background-repeat: no-repeat
+        .icon
+          position: absolute
+          right: 16px
+          bottom: 16px
+          @include circleArrow
+        &.recruitment
+          background-image: url('/assets/images/common/consultation-01.png')
+        &.production
+          background-image: url('/assets/images/common/consultation-02.png')
+        &-text
+          font-size: $title_sub_font
+          font-weight: $base_weight
+          .text-sub
+            display: block
+            padding: 8px 0 0
+            font-size: $base_font - 0.1
+            color: $bule_thin_color
+
+.banner-stick
+  position: fixed
+  z-index: 3
+  right: 0
+  bottom: 30px
+  width: 230px
+  @media screen and (max-width: 768px)
+    bottom: 0
+    width: 100vw
+  .block
+    &__content
+  .content
+    &__bannar
+      @media screen and (max-width: 768px)
+        display: flex
+  .banner-box
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16)
+    @media screen and (max-width: 768px)
+      max-width: 50%
+      box-shadow: none
+    &:first-child
+      margin: 0 0 16px
+      @media screen and (max-width: 768px)
+        margin: 0
+    .img_pc
+      @media screen and (max-width: 768px)
+        display: none
+    .img_sp
+      display: none
+      @media screen and (max-width: 768px)
+        display: block

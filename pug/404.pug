@@ -1,0 +1,25 @@
+| <body>
+
+| <?php get_header(); ?>
+
+main.main
+  section.section-404
+    .block__content._flex_c_
+      .text-box
+        .text-body
+          h3.title
+            | ページが
+            br._pc_hide_
+            | 見つかりません。
+            br._pc_hide_
+            |（404）
+          p.text
+            | アクセスしようとしているページは、ご覧になっていたページからのリンクが無効になっているか、アドレス(URL)が間違っているため見つかりませんでした。
+          .btn-box
+            a.btn.top-back(href="/product/sekou")
+              | トップへ
+
+      .img-box
+        img(src="./assets/images/404/404.png")
+
+| <?php get_footer(); ?>

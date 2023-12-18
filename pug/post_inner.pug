@@ -1,0 +1,37 @@
+
+-
+  var links = ["#service-1","#service-2","#service-3","#service-4","#service-5","#service-6"]
+header.header._flex_s_b_._fade_animation_Top_
+  .header__logo
+    img.header__logo-img(src="/assets/images/lp/careecon_work_logo.png")
+  nav.header__nav._gnav_hide_
+    ul.header__nav-list
+      each val,index in ["text","text","text","text","text"]
+        li.header__nav-item
+          a(href=`${links[index]}`).header__nav-link._smooth_= val
+  .header__service-info
+    ul.service-info-list._flex_
+      each val,index in ["text","text","text"]
+        - if(index == 1)
+          li.service-info-item
+            a(href="#service-6").service-info-link._smooth_
+              = val
+        - else if(index == 2)
+          li.service-info-item._gnav_hide_
+            a(href="#").service-info-link.link-btn
+              = val
+        - else
+          li.service-info-item
+            a(href=`#`).service-info-link= val
+  .header__sp-btn._gnav_fade_
+    span.icon
+      span.icon-parts
+      span.icon-parts
+      span.icon-parts
+
+.sp-nav
+  ul.sp-nav__list._flex_
+    each val,index in ["text","text","text","text","text","text"]
+      li.sp-nav__item
+        a.sp-nav__link._smooth_(href=`${links[index]}`)= val
+.header__remove-overlay

@@ -1,0 +1,75 @@
+
+-
+  var footer_data = {
+    0 : {
+      title : "お問い合わせ",
+      class : "contact",
+      links : [
+        "00-0000-0000 (代表)",
+        "info@google.jp",
+        "よくあるご質問"
+      ]
+    },
+    1 : {
+      title : "お知らせ",
+      class : "news",
+      links : [
+        "ニュースリリーストップ",
+        "月別アーカイブ",
+      ]
+    }
+  }
+
+  var footer_banner = {
+    1 : {
+      path: "/assets/images/bannar/_img_bannar_0"
+    },
+    2 : {
+      path: "/assets/images/bannar/_img_bannar_0"
+    },
+    3 : {
+      path: "/assets/images/bannar/_img_bannar_0"
+    },
+    4 : {
+      path: "/assets/images/bannar/_img_bannar_0"
+    }
+  }
+
+footer.footer
+  .footer-header
+    h3.footer-header__title
+      | 建設業界をテクノロジーの力で変革する
+    .footer-banner
+      ul.footer-banner__list._flex_c_
+        each k,index in footer_banner
+          li.footer-banner__item
+            img.img(src=`${k.path+index}.png`)
+  .footer__content._flex_s_b_
+    .footer-nav._flex_
+      each val in footer_data
+        .footer-nav__block(class=`${val.class}`)
+          h3.title
+            | #{ val.title }
+          ul.footer-list
+            each item in val.links
+              li.footer-item
+                a(href="#").footer-item-link
+                  | #{ item }
+    .footer-register
+      h3.footer-register__caption
+       | メールアドレス登録
+      p.footer-register__text
+       | CAREECON for Workに関する最新の情報をお届け。ニュースレターの登録はこちらから。
+      p.footer-register__text
+        | [contact-form-7 id="12" title="footer news letter"]
+        //- input(type="text" name="user-register" id="footer-news-register" placeholder="メールアドレスを入力")
+          input(type="submit" name="user-register" id="footer-news-submit" value="登録する")
+
+  p.footer-copyright
+   small.copyright
+    | &copy; BRANU
+
+.
+  <?php wp_footer(); ?>
+| </body>
+| </html>

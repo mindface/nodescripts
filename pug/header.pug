@@ -1,0 +1,42 @@
+doctype html
+| <html charset="<?php bloginfo( 'charset' ); ?>">
+head
+  include ./meta/_meta
+  .
+    <?php wp_head(); ?>
+
+
+-
+  var links = ["#service-1","#service-2","#service-3","#service-4","#service-5","#service-6"]
+| <body <?php body_class( $class ); ?>>
+
+header.header._flex_s_b_._fade_animation_Top_
+  .header__logo
+    img.header__logo-img(src="/assets/images/common/careecon_work_logo.png")
+
+  .header__service-info
+    ul.service-info-list._flex_
+      each val,index in ["ログイン","資料請求","30日間の無料お試し"]
+        - if(index == 1)
+          li.service-info-item
+            a(href="#service-6").service-info-link._smooth_
+              = val
+        - else if(index == 2)
+          li.service-info-item._gnav_hide_
+            a(href="#").service-info-link.link-btn
+              = val
+        - else
+          li.service-info-item
+            a(href=`#`).service-info-link= val
+  .header__sp-btn._gnav_fade_
+    span.icon
+      span.icon-parts
+      span.icon-parts
+      span.icon-parts
+
+.sp-nav
+  ul.sp-nav__list._flex_
+    each val,index in ["text","text","text","text","text","text"]
+      li.sp-nav__item
+        a.sp-nav__link._smooth_(href=`${links[index]}`)= val
+.header__remove-overlay

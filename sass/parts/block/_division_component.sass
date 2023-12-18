@@ -1,0 +1,73 @@
+
+.part
+  &-section
+    padding: 76px 0 0
+    .part-section-title
+      line-height: 1.3888
+      padding: 0 0 24px
+      @media screen and (max-width: 767px)
+        padding: 0 0 12px
+    .title-sub
+      font-size: $base_font + 0.4
+      text-align: center
+      @media screen and (max-width: 767px)
+        padding: 0 0 33px
+        font-size: $small_font + 0.1
+        line-height: 1.7
+    .content
+      position: relative
+      @include baseWidth
+      padding: 0 0 48px
+      &--reverse
+        .content__img
+           .img
+             left: auto
+             transform: translate(-18px,54px)
+      &__text
+        min-width: calc(50% + 18px)
+        padding: 70px 0 104px
+        @media screen and (max-width: 767px)
+          max-width: 100%
+        &-title
+          padding: 0 24px 40px
+          text-align: left
+          @media screen and (max-width: 767px)
+            padding: 0 0 30px
+            text-align: center
+        .text-box
+          padding: 0 24px
+          font-size: $base_font
+          line-height: 1.9
+          @media screen and (max-width: 767px)
+            font-size: $sub_font
+            padding: 0 16px
+          .text
+            &:first-child
+              margin: -2px 0 0
+
+      &__img
+        width: calc(50% - 20px)
+        @media screen and (max-width: 767px)
+          width: 100%
+          max-width: 100%
+          padding: 0 16px
+        .img-box
+          position: relative
+          height: 92%
+          max-height: 451px
+          @media screen and (max-width: 767px)
+            height: auto
+            max-height: inherit
+        .img
+          @include img_positionHeight()
+          max-width: inherit
+          transform: translate(18px,54px)
+          box-shadow: 0 4px 16px rgba(44,93,255,0.1)
+          @media screen and (max-width: 767px)
+            max-width: 100%
+            height: auto
+  &-btn-box
+    width: 100%
+    text-align: center
+  &-btn
+    display: inline-block

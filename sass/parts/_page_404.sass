@@ -1,0 +1,54 @@
+
+.section-404
+  .block
+    &__content
+      max-width: 920px
+      margin: 0 auto
+      padding: 122px 20px 197px
+      @media screen and (max-width: 1040px)
+        padding: 122/1040*100vw 20px 197/1040*100vw
+      @media screen and (max-width: 480px)
+        flex-direction: column
+      .text-box
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        max-width: calc(100% - 314px)
+        @media screen and (max-width: 768px)
+          max-width: calc(100% - 314/768*100vw)
+        @media screen and (max-width: 480px)
+          max-width: 100%
+        .title
+          padding: 0 0 24px
+          font-size: 3.4rem
+          font-weight: 600
+          @media screen and (max-width: 768px)
+            font-size: 2rem
+        .text
+          padding: 0 0 32px
+          font-size: 1.6rem
+          line-height: 1.7
+          @media screen and (max-width: 768px)
+            font-size: 1.2rem
+        .btn-box
+          .btn
+            display: block
+            max-width: 104px
+            height: 39px
+            line-height: 39px
+            background-color: $base_blue
+            color: #fff
+            border-radius: 3px
+            font-size: 1.4rem
+            text-align: center
+            font-weight: 600
+
+      .img-box
+         max-width: 314px
+         @media screen and (max-width: 1040px)
+           max-width: 314/1040*100vw
+         @media screen and (max-width: 768px)
+           max-width: 314/768*100vw
+         @media screen and (max-width: 480px)
+           max-width: 180/480*100vw
+           padding-top: 20px

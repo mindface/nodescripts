@@ -1,0 +1,75 @@
+| <?php get_header(); ?>
+| <?php $detail = get_post_meta($post->ID,item_name,true); ?>
+| <?php echo breadcrumb(); ?>
+.page-single
+  main.main
+    | <?php if(have_posts()): while(have_posts()):the_post(); ?>
+    article.article-post
+      h1.article-post__title
+        | <?php the_title(); ?>
+      .article-post__explanation
+        .article-post__explanation-text
+          .text
+            | <?php echo ($detail); ?>
+      .article-post--visual-area
+        .article-post__visual
+          .visual-img
+            | <?php the_post_thumbnail(); ?>
+        .article-post__details
+          .contents-levels._flex_
+            h3.contents-levels__title
+              | CONTENTS
+              span.title-sub
+                | 目次
+            .contents-levels__flows
+              #flow
+      .article-post__editer-content
+        | <?php the_content() ?>
+      .article-post__other-post
+        .block__content._flex_
+          .content__img
+            .img-box
+              | <?php the_post_thumbnail(); ?>
+          .content__text
+            h3.title
+              | タイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入ります
+            .text
+              p.text-inner texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            .info-link
+              a(href="").link
+                | https://careecon.jp/blog/9613014476
+          .content__icon
+      | <?php echo do_shortcode( '[single_banner]' ); ?>
+
+      .article-post__contributor
+        .article-post__contributor-body
+          .block__title-box
+            h3.block__title
+              | この記事を書いた人
+          .block__content
+            .block__content
+              .block__content._flex_
+                .content__img
+                  .img-box
+                    | <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
+                  .name-box
+                    p.name
+                      | <?php the_author(); ?>
+                .content__text
+                  p.text
+                    | <?php the_author_meta('user_description'); ?>
+                  | <?php if(get_the_author_meta( "user_url")): ?>
+                  |  <div class="info-link">
+                  |    <a class="link" href="<?php echo get_the_author_meta( "user_url"); ?>"><?php the_author_meta( "user_url"); ?></a>
+                  | </div>
+                  | <?php endif; ?>
+      | <?php endwhile; endif; ?>
+  include ./parts/_single_more_know.pug
+  include ./parts/_single_recommend.pug
+
+  | <?php get_template_part('block-category') ?>
+  | <?php get_template_part('block-consultation') ?>
+
+| <?php get_footer(); ?>
+
+include ./parts/banner-stick.pug
